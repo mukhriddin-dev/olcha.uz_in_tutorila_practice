@@ -106,6 +106,8 @@
   justify-content: space-around;
   align-items: center;
   transition: all 0.5s ease;
+  position: relative;
+  z-index: 4;
 }
 
 .navbar-bottom .brand{
@@ -327,9 +329,9 @@
 
 
 .product_feed{
-width: 80%;
+width: 92%;
 height:200px;
-margin: 35px auto;
+margin: 25px auto;
 overflow: hidden;
 }
 
@@ -338,14 +340,55 @@ overflow: hidden;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  position: relative;
+  transition: transform 0.5s ease;
 }
 
 
 .product_feed .product_box .pro_card{
-  width: 250px;
-  height: 200px;
+  min-width: 100px;
+  max-height: 100px;
   background:white;
-  padding: 25px 35px;
-  margin:0 25px;
+  margin:10px 20px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+
+.product_feed .product_box .pro_card .pro_item{
+  margin: 10px;
+}
+
+.product_feed .product_box .pro_card  p{
+  color: rgb(70, 70, 70);
+  font-family: Arial;
+}
+
+/*  4 */
+
+
+.prev{
+  position: absolute;
+  font-size: 32px;
+  color:red;
+  left:3rem;
+  top:15rem;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.next{
+  position: absolute;
+  font-size: 32px;
+  color:red;
+  right:3rem;
+  top:15rem;
+  z-index: 2;
+  cursor: pointer;
 }
